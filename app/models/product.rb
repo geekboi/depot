@@ -1,5 +1,11 @@
 class Product < ActiveRecord::Base
   
+  default_scope :order => 'title'
+  
+  
+  #
+  # VALIDATION
+  #
   validates :title, :description, :image_url, :presence => true
   
   # Be sure the price is valid 
